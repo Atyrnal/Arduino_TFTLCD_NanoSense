@@ -17,7 +17,7 @@
 #include <nrf.h>
 #endif
 #include "Adafruit_TFTLCD_NanoSense.h"
-#include "pin_magic.h"
+#include "pin_magic_nano.h"
 #include "pins_arduino.h"
 #include "wiring_private.h"
 
@@ -84,7 +84,7 @@ Adafruit_TFTLCD::Adafruit_TFTLCD(void) : Adafruit_GFX(TFTWIDTH, TFTHEIGHT) {
 }
 
 // Initialization common to both shield & breakout configs
-void Adafruit_TFTLCD::init(void) {
+void Adafruit_TFTLCD::init(void) {}
 
 // Initialization command tables for different LCD controllers
 #define TFTLCD_DELAY 0xFF
@@ -284,7 +284,7 @@ static const uint16_t ILI932x_regValues[] PROGMEM = {
     ILI932X_DISP_CTRL1,
     0x0133, // Main screen turn on
 };
-}
+
 
 void Adafruit_TFTLCD::begin(uint16_t id) {
   uint8_t i = 0;
