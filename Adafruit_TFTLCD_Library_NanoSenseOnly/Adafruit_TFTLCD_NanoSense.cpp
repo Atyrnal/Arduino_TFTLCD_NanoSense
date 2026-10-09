@@ -16,7 +16,7 @@
 #if defined(ARDUINO_ARCH_NRF52840)
 #include <nrf.h>
 #endif
-#include "Adafruit_TFTLCD.h"
+#include "Adafruit_TFTLCD_NanoSense.h"
 #include "pin_magic.h"
 #include "pins_arduino.h"
 #include "wiring_private.h"
@@ -284,6 +284,7 @@ static const uint16_t ILI932x_regValues[] PROGMEM = {
     ILI932X_DISP_CTRL1,
     0x0133, // Main screen turn on
 };
+}
 
 void Adafruit_TFTLCD::begin(uint16_t id) {
   uint8_t i = 0;
